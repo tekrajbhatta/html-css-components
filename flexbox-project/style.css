@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Open Sans", sans-serif;
+}
+
+header {
+  border-bottom: 3px solid #8080802d;
+}
+
+.brand-logo {
+  width: 50px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  margin: 0 auto;
+  height: 100px;
+}
+
+.links-section {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 80%;
+}
+
+.links-section ul {
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: center;
+  margin-right: 20px;
+}
+
+.links-section ul li {
+  list-style: none;
+  margin-right: 20px;
+}
+
+.links-section ul li:last-child {
+  margin-right: 0px;
+}
+
+.links-section ul li a {
+  text-decoration: none;
+  color: #3a3a3a;
+}
+
+/* poor hover */
+
+/* .links-section ul li a:hover {
+  color: #462582;
+  text-decoration: underline;
+  text-decoration-color: #462582;
+} */
+
+/* our way using transition */
+
+.links-section ul li a::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 0;
+  background-color: #462582;
+  transition: all 0.5s;
+}
+
+.links-section ul li a:hover::after {
+  width: 100%;
+}
+
+.sign-up {
+  padding: 8px 16px;
+  color: #fff;
+  background-color: #462582;
+  border: none;
+  border-radius: 20px;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.hero-section {
+  display: flex;
+  padding: 40px 0;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 103px);
+}
+
+.hero-desc h1 {
+  font-size: 3rem;
+  text-transform: uppercase;
+  color: #462582;
+}
+
+.hero-desc h2 {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  color: #f7a70c;
+  font-weight: 400;
+  margin-bottom: 20px;
+  letter-spacing: 6px;
+}
+
+.hero-desc p {
+  line-height: 2;
+  margin-bottom: 14px;
+  font-weight: 400;
+}
+
+.learn-more {
+  text-transform: uppercase;
+  padding: 10px 20px;
+  color: #fff;
+  background-color: #462582;
+  border-radius: 20px;
+  border: none;
+}
+
+.hero-img {
+  max-width: 500px;
+}
